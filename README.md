@@ -53,6 +53,11 @@ its category. Net effect: fewer requests, same required fields per row
   1–5.
 - `in_stock`: the availability text checked for the substring "out of
   stock" vs "in stock" and mapped to a boolean.
+- `stock_count`: the number of available units, e.g. `22` from "In stock
+  (22 available)"; `0` for "Out of stock". **This count only appears on
+  each book's own detail page, not the category listing page** — so
+  `scrape.py` visits each book's detail URL (one extra request per book)
+  to pull it, in addition to the listing page for title/price/rating.
 
 **Currency conversion — fixed baseline rate.**
 `price_inr = price_gbp * 105.50`. This is the project-defined fixed
@@ -80,7 +85,7 @@ parsed cleanly (0 dropped) — see `clean_and_load.py` output.
 `book_id`, FK `category_id → categories.category_id`), matching the
 suggested schema in the assignment.
 
-**SQL queries (`run_queries.py`).** Six queries covering every required
+**SQL queries (`run_queries.py`).** Seven queries covering every required
 clause:
 1. `SELECT` / `WHERE` — in-stock books under 2000 INR
 2. `ORDER BY` / `LIMIT` — 10 most expensive books
@@ -88,6 +93,7 @@ clause:
 4. `BETWEEN` — books priced 1500–3000 INR
 5. `IN` — books in a chosen category subset
 6. `JOIN` — top 3 highest-rated books per category (`books` ⋈ `categories`)
+7. `stock_count` — in-stock books with fewer than 5 units available
 
 Full printed output of all six is captured in `query_results.txt` after
 running `run_queries.py`.
@@ -114,6 +120,7 @@ the real site for the graded data.
 | File | Purpose |
 |---|---|
 | `scrape.py` | Scrapes books.toscrape.com by category → `raw_books.csv` |
+| `scrape_selenium.py` | Same scrape, driven via a visible Selenium/Chrome browser instead of requests |
 | `clean_and_load.py` | Cleans/types fields, converts currency, builds `books.db` |
 | `run_queries.py` | Runs the 6 required SQL queries → `query_results.txt` |
 | `pandas_verify.py` | `pd.read_sql` + `pd.merge` equivalence check |

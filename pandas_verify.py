@@ -32,7 +32,7 @@ print(df_distinct_ratings.to_string(index=False))
 # --- 2. SQL JOIN result, via pd.read_sql --------------------------------
 
 sql_join = """
-    SELECT c.category_name, b.title, b.rating, b.price_inr
+    SELECT c.category_name, b.title, b.rating, b.stock_count, b.price_inr
     FROM books b
     JOIN categories c ON b.category_id = c.category_id
     ORDER BY c.category_name, b.title;
@@ -46,7 +46,7 @@ categories_df = pd.read_sql("SELECT * FROM categories", conn)
 
 df_join_merge = (
     books_df.merge(categories_df, on="category_id", how="inner")
-    [["category_name", "title", "rating", "price_inr"]]
+    [["category_name", "title", "rating", "stock_count", "price_inr"]]
     .sort_values(["category_name", "title"])
     .reset_index(drop=True)
 )

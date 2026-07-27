@@ -5,6 +5,9 @@ Reads raw_books.csv (output of scrape.py), cleans/types every field,
 converts price to INR using the fixed project baseline rate, and loads
 everything into a normalized two-table SQLite database (books.db).
 
+Adds a stock_count column parsed from the detail-page availability text
+(e.g. "In stock (22 available)" -> 22; "Out of stock" -> 0).
+
 Fixed conversion rate (project-defined constant, not a live/historical
 market rate — no lookup or date reference needed):
     1 GBP = 105.50 INR
@@ -50,13 +53,29 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
             return True
         return None
 
+    def parse_stock_count(v):
+        # e.g. "In stock (22 available)" -> 22; "Out of stock" -> 0
+        text = str(v)
+        m = re.search(r"\((\d+)\s*available\)", text)
+        if m:
+            return int(m.group(1))
+        if "out of stock" in text.lower():
+            return 0
+        return None  # in-stock but no count present (shouldn't happen on detail pages)
+
     df = df.copy()
     df["price_gbp"] = df["price"].apply(parse_price)
     df["rating"] = df["star_rating"].apply(parse_rating)
     df["in_stock"] = df["availability"].apply(parse_stock)
+    df["stock_count"] = df["availability"].apply(parse_stock_count)
 
     before = len(df)
-    bad_mask = df["price_gbp"].isna() | df["rating"].isna() | df["in_stock"].isna()
+    bad_mask = (
+        df["price_gbp"].isna()
+        | df["rating"].isna()
+        | df["in_stock"].isna()
+        | df["stock_count"].isna()
+    )
     if bad_mask.any():
         dropped = df.loc[bad_mask, "title"].tolist()
         print(f"Dropping {bad_mask.sum()} unparseable row(s): {dropped}")
@@ -67,8 +86,19 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     df["price_inr"] = (df["price_gbp"] * GBP_TO_INR).round(2)
     df["rating"] = df["rating"].astype(int)
     df["in_stock"] = df["in_stock"].astype(bool)
+    df["stock_count"] = df["stock_count"].astype(int)
 
-    return df[["title", "price_gbp", "price_inr", "rating", "in_stock", "category"]]
+    return df[
+        [
+            "title",
+            "price_gbp",
+            "price_inr",
+            "rating",
+            "in_stock",
+            "stock_count",
+            "category",
+        ]
+    ]
 
 
 def load_to_sqlite(df: pd.DataFrame, db_path: str = "books.db"):
@@ -92,6 +122,7 @@ def load_to_sqlite(df: pd.DataFrame, db_path: str = "books.db"):
             price_inr REAL NOT NULL,
             rating INTEGER NOT NULL,
             in_stock INTEGER NOT NULL,
+            stock_count INTEGER NOT NULL,
             category_id INTEGER NOT NULL REFERENCES categories(category_id)
         );
         """
@@ -115,13 +146,14 @@ def load_to_sqlite(df: pd.DataFrame, db_path: str = "books.db"):
             r.price_inr,
             r.rating,
             int(r.in_stock),
+            r.stock_count,
             cat_id_map[r.category],
         )
         for r in df.itertuples()
     ]
     cur.executemany(
-        """INSERT INTO books (title, price_gbp, price_inr, rating, in_stock, category_id)
-           VALUES (?, ?, ?, ?, ?, ?)""",
+        """INSERT INTO books (title, price_gbp, price_inr, rating, in_stock, stock_count, category_id)
+           VALUES (?, ?, ?, ?, ?, ?, ?)""",
         rows,
     )
     conn.commit()

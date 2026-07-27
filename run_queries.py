@@ -77,6 +77,15 @@ QUERIES = [
         ORDER BY c.category_name, b.rating DESC;
         """,
     ),
+    (
+        "Q7: stock_count — low-stock in-stock books (fewer than 5 available)",
+        """
+        SELECT title, stock_count, price_inr
+        FROM books
+        WHERE in_stock = 1 AND stock_count < 5
+        ORDER BY stock_count ASC;
+        """,
+    ),
 ]
 
 
