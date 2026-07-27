@@ -52,6 +52,33 @@ PRODUCT_POD = """
 </article>
 """
 
+DETAIL_PAGE_TEMPLATE = """<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8"><title>{title} | Books to Scrape</title></head>
+<body>
+<div class="page">
+  <ul class="breadcrumb">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../category/books/{category_slug}/index.html">Books</a></li>
+    <li class="active">{category}</li>
+    <li class="active">{title}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6 product_main">
+      <h1>{title}</h1>
+      <p class="price_color">£{price}</p>
+      <p class="instock availability">
+        <i class="icon-ok"></i>
+        {availability_detail}
+      </p>
+      <p class="star-rating {rating}"><i class="icon-star"></i></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+"""
+
 PAGE_TEMPLATE = """<!DOCTYPE html>
 <html lang="en-us">
 <head><meta charset="utf-8"><title>{category} | Books to Scrape</title></head>
@@ -79,17 +106,41 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 """
 
 
-def make_pod(i, category_slug):
+def make_pod(i, category_slug, category_name, base_out_dir):
     title = f"{random.choice(BOOK_TITLES)} {i}"
+    price = f"{random.uniform(10, 60):.2f}"
+    in_stock = random.choice([True, True, True, False])
+    availability = "In stock" if in_stock else "Out of stock"
+    rating = random.choice(RATINGS)
+    book_slug = f"{category_slug}-book-{i}"
+
+    # detail page lives at fixtures/catalogue/<book_slug>/index.html,
+    # matching books.toscrape.com's real /catalogue/<slug>/index.html layout
+    detail_dir = os.path.join(base_out_dir, "..", "..", "..", book_slug)
+    os.makedirs(detail_dir, exist_ok=True)
+    count = random.randint(1, 30) if in_stock else 0
+    availability_detail = (
+        f"In stock ({count} available)" if in_stock else "Out of stock"
+    )
+    with open(os.path.join(detail_dir, "index.html"), "w") as f:
+        f.write(
+            DETAIL_PAGE_TEMPLATE.format(
+                title=title,
+                category=category_name,
+                category_slug=category_slug,
+                price=price,
+                availability_detail=availability_detail,
+                rating=rating,
+            )
+        )
+
     return PRODUCT_POD.format(
-        slug=f"{category_slug}-book-{i}",
+        slug=book_slug,
         title=title,
         title_short=title,
-        rating=random.choice(RATINGS),
-        price=f"{random.uniform(10, 60):.2f}",
-        availability=random.choice(
-            ["In stock", "In stock", "In stock", "Out of stock"]
-        ),
+        rating=rating,
+        price=price,
+        availability=availability,
     )
 
 
@@ -99,7 +150,7 @@ def build_category(slug, name, out_dir, n_pages=2, per_page=8):
     for page in range(1, n_pages + 1):
         pods = []
         for _ in range(per_page):
-            pods.append(make_pod(book_counter, slug))
+            pods.append(make_pod(book_counter, slug, name, out_dir))
             book_counter += 1
         pagination = ""
         if page < n_pages:

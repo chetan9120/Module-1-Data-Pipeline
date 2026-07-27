@@ -11,11 +11,18 @@ Design choice: rather than the "5 pages of All products" scope, this script
 scrapes 5 named categories (Travel, Mystery, Classics, Fantasy, Fiction),
 each with pagination followed to the end. This satisfies "at least 3
 categories" and lets us read category directly off each category page's
-breadcrumb/heading, with no need to hit book detail pages.
+breadcrumb/heading.
+
+Note on availability/stock count: the category listing page only shows
+"In stock" / "Out of stock" — the actual available-unit count (e.g. "In
+stock (22 available)") only appears on each book's own detail page. So this
+script visits each book's detail page (one extra request per book) to pull
+that count alongside the plain availability text.
 """
 import argparse
 import csv
 import time
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -29,6 +36,18 @@ CATEGORIES = {
 }
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (data-pipeline-assignment scraper)"}
+
+
+def fetch_stock_count(detail_url, session, delay=0.3):
+    """Visits a book's detail page and returns its raw availability string,
+    e.g. 'In stock (22 available)' or 'Out of stock'."""
+    resp = session.get(detail_url, headers=HEADERS, timeout=15)
+    resp.raise_for_status()
+    resp.encoding = "utf-8"
+    soup = BeautifulSoup(resp.text, "html.parser")
+    availability_detail = soup.select_one("p.instock.availability").get_text(strip=True)
+    time.sleep(delay)
+    return availability_detail
 
 
 def scrape_category(base_url, slug, name, session, delay=0.5):
@@ -49,7 +68,10 @@ def scrape_category(base_url, slug, name, session, delay=0.5):
             rating_classes = pod.select_one("p.star-rating")["class"]
             # class list is like ["star-rating", "Three"] — rating word is the non-"star-rating" token
             star_word = next((c for c in rating_classes if c != "star-rating"), None)
-            availability_text = pod.select_one("p.instock.availability").get_text(strip=True)
+
+            detail_href = pod.h3.a["href"]
+            detail_url = urljoin(url, detail_href)
+            availability_text = fetch_stock_count(detail_url, session)
 
             rows.append(
                 {
