@@ -1,81 +1,81 @@
 title,price,star_rating,availability,category
-Ashes and Embers 1,£11.25,One,In stock,Travel
-Whispers in the Dark 2,£16.98,Two,In stock,Travel
-The Ivory Gate 3,£14.35,Five,Out of stock,Travel
-Shadows of Time 4,£14.68,One,In stock,Travel
-Fragments of Memory 5,£11.33,Five,In stock,Travel
-Voices in the Fog 6,£30.98,Five,Out of stock,Travel
-Beneath the Surface 7,£50.47,Three,In stock,Travel
-The Hidden Garden 8,£27.01,Four,In stock,Travel
-Beyond the Horizon 9,£15.11,Three,Out of stock,Travel
-The Last Voyage 10,£52.37,Three,In stock,Travel
-Shadows of Time 11,£36.81,Four,Out of stock,Travel
-A Winter's Tale 12,£24.66,Five,In stock,Travel
-Beneath the Surface 13,£45.23,Two,In stock,Travel
-The Ivory Gate 14,£48.65,Two,In stock,Travel
-Whispers in the Dark 15,£29.01,One,Out of stock,Travel
-Ashes and Embers 16,£18.13,Three,In stock,Travel
-Beyond the Horizon 1,£45.09,Three,In stock,Mystery
-The Quiet Storm 2,£36.71,Two,In stock,Mystery
-The Hidden Garden 3,£28.97,Four,In stock,Mystery
-The Ivory Gate 4,£52.14,Three,In stock,Mystery
-Whispers in the Dark 5,£50.25,One,Out of stock,Mystery
-The Forgotten Kingdom 6,£20.55,One,In stock,Mystery
-Beyond the Horizon 7,£29.78,Four,Out of stock,Mystery
-Echoes of Dawn 8,£16.98,Three,In stock,Mystery
-The Amber Room 9,£31.42,Five,Out of stock,Mystery
-Songs of the Sea 10,£59.87,Two,In stock,Mystery
-Fragments of Memory 11,£14.55,Four,In stock,Mystery
-The Last Voyage 12,£41.37,Two,Out of stock,Mystery
-The Quiet Storm 13,£29.24,One,Out of stock,Mystery
-Fragments of Memory 14,£58.55,Three,In stock,Mystery
-The Ivory Gate 15,£44.09,One,In stock,Mystery
-Ashes and Embers 16,£15.58,Three,Out of stock,Mystery
-The Hidden Garden 1,£10.16,Four,In stock,Classics
-Fragments of Memory 2,£35.38,Two,In stock,Classics
-Ashes and Embers 3,£52.08,Three,In stock,Classics
-Echoes of Dawn 4,£48.13,Three,In stock,Classics
-The Quiet Storm 5,£34.43,Three,In stock,Classics
-Songs of the Sea 6,£21.97,Three,In stock,Classics
-Beneath the Surface 7,£14.28,One,Out of stock,Classics
-A Winter's Tale 8,£48.29,Five,In stock,Classics
-The Ivory Gate 9,£57.34,Four,In stock,Classics
-The Forgotten Kingdom 10,£53.62,Five,Out of stock,Classics
-Beyond the Horizon 11,£47.76,Five,In stock,Classics
-Voices in the Fog 12,£29.95,Three,In stock,Classics
-Winds of Change 13,£32.57,Five,In stock,Classics
-Whispers in the Dark 14,£26.90,One,In stock,Classics
-Beneath the Surface 15,£10.36,Two,In stock,Classics
-Whispers in the Dark 16,£55.27,One,In stock,Classics
-A Winter's Tale 1,£21.90,Five,Out of stock,Fantasy
-Beyond the Horizon 2,£16.62,Five,Out of stock,Fantasy
-Whispers in the Dark 3,£50.37,Four,In stock,Fantasy
-The Last Voyage 4,£42.95,One,In stock,Fantasy
-The Crimson Letter 5,£33.35,Four,In stock,Fantasy
-The Ivory Gate 6,£13.03,One,In stock,Fantasy
-The Last Voyage 7,£19.58,Two,Out of stock,Fantasy
-Echoes of Dawn 8,£19.17,Four,Out of stock,Fantasy
-Whispers in the Dark 9,£32.16,One,In stock,Fantasy
-Shadows of Time 10,£51.80,Five,In stock,Fantasy
-Whispers in the Dark 11,£30.32,Two,Out of stock,Fantasy
-Beyond the Horizon 12,£55.12,Four,In stock,Fantasy
-A Distant Light 13,£59.27,One,In stock,Fantasy
-Winds of Change 14,£31.15,Three,Out of stock,Fantasy
-Echoes of Dawn 15,£24.84,Two,In stock,Fantasy
-Beneath the Surface 16,£13.05,Five,In stock,Fantasy
-Shadows of Time 1,£39.21,One,In stock,Fiction
-Shadows of Time 2,£14.01,Five,In stock,Fiction
-A Winter's Tale 3,£13.40,Five,In stock,Fiction
-A Distant Light 4,£57.08,One,In stock,Fiction
-Beneath the Surface 5,£11.99,Five,In stock,Fiction
-The Crimson Letter 6,£38.26,Five,In stock,Fiction
-The Forgotten Kingdom 7,£43.49,Two,In stock,Fiction
-Whispers in the Dark 8,£29.79,Three,In stock,Fiction
-Winds of Change 9,£56.45,Three,In stock,Fiction
-The Silent Path 10,£41.06,Four,In stock,Fiction
-A Winter's Tale 11,£20.66,Five,In stock,Fiction
-Echoes of Dawn 12,£54.04,Three,In stock,Fiction
-Songs of the Sea 13,£17.89,Three,In stock,Fiction
-The Quiet Storm 14,£10.39,Five,In stock,Fiction
-The Ivory Gate 15,£56.95,One,In stock,Fiction
-The Forgotten Kingdom 16,£54.49,One,In stock,Fiction
+Ashes and Embers 1,£15.57,Two,In stock (8 available),Travel
+Echoes of Dawn 2,£46.82,Five,In stock (14 available),Travel
+Shadows of Time 3,£11.49,Two,In stock (17 available),Travel
+The Quiet Storm 4,£11.33,Five,In stock (14 available),Travel
+Whispers in the Dark 5,£32.46,One,In stock (25 available),Travel
+The Hidden Garden 6,£44.91,Three,In stock (5 available),Travel
+Beyond the Horizon 7,£57.86,One,In stock (3 available),Travel
+A Distant Light 8,£14.84,Five,In stock (9 available),Travel
+Shadows of Time 9,£46.49,Four,In stock (3 available),Travel
+The Golden Hour 10,£24.66,Five,In stock (7 available),Travel
+Voices in the Fog 11,£13.48,Three,In stock (3 available),Travel
+Whispers in the Dark 12,£53.32,Three,Out of stock,Travel
+Winds of Change 13,£41.78,Two,In stock (12 available),Travel
+Songs of the Sea 14,£20.48,One,In stock (20 available),Travel
+Ashes and Embers 15,£18.56,Two,In stock (15 available),Travel
+A Distant Light 16,£23.50,Three,In stock (27 available),Travel
+Shadows of Time 1,£21.45,Three,In stock (13 available),Mystery
+The Forgotten Kingdom 2,£13.31,Two,In stock (21 available),Mystery
+The Paper Moon 3,£29.78,Two,Out of stock,Mystery
+The Forgotten Kingdom 4,£16.98,Five,In stock (14 available),Mystery
+Beneath the Surface 5,£29.97,Two,In stock (17 available),Mystery
+The Paper Moon 6,£14.55,One,In stock (5 available),Mystery
+Ashes and Embers 7,£18.00,Five,Out of stock,Mystery
+A Winter's Tale 8,£29.24,Five,Out of stock,Mystery
+The Forgotten Kingdom 9,£58.55,One,In stock (22 available),Mystery
+The Golden Hour 10,£47.54,One,In stock (10 available),Mystery
+The Crimson Letter 11,£17.91,Three,In stock (17 available),Mystery
+The Hidden Garden 12,£35.38,Three,In stock (27 available),Mystery
+Ashes and Embers 13,£35.38,Two,In stock (12 available),Mystery
+The Hidden Garden 14,£36.97,Five,In stock (11 available),Mystery
+The Paper Moon 15,£10.97,Three,In stock (8 available),Mystery
+Shadows of Time 16,£22.04,One,In stock (24 available),Mystery
+The Paper Moon 1,£50.80,Two,In stock (22 available),Classics
+The Paper Moon 2,£57.34,Three,In stock (17 available),Classics
+The Quiet Storm 3,£31.16,Five,In stock (25 available),Classics
+The Amber Room 4,£44.49,Four,In stock (22 available),Classics
+Ashes and Embers 5,£28.67,One,Out of stock,Classics
+Whispers in the Dark 6,£21.23,One,In stock (19 available),Classics
+The Golden Hour 7,£21.51,One,In stock (3 available),Classics
+Voices in the Fog 8,£41.56,One,In stock (29 available),Classics
+Shadows of Time 9,£52.98,Five,In stock (8 available),Classics
+The Forgotten Kingdom 10,£43.45,Five,In stock (5 available),Classics
+The Amber Room 11,£56.78,Two,Out of stock,Classics
+The Paper Moon 12,£50.37,One,In stock (4 available),Classics
+The Ivory Gate 13,£31.55,Four,Out of stock,Classics
+Winds of Change 14,£53.19,One,In stock (2 available),Classics
+A Distant Light 15,£46.41,Two,In stock (7 available),Classics
+Beyond the Horizon 16,£36.81,Four,In stock (6 available),Classics
+The Forgotten Kingdom 1,£33.13,Four,In stock (26 available),Fantasy
+The Golden Hour 2,£14.90,One,In stock (30 available),Fantasy
+Whispers in the Dark 3,£18.32,Four,Out of stock,Fantasy
+Beyond the Horizon 4,£53.23,Two,In stock (13 available),Fantasy
+The Silent Path 5,£59.27,Four,In stock (10 available),Fantasy
+The Crimson Letter 6,£44.83,Two,Out of stock,Fantasy
+Beyond the Horizon 7,£24.84,Five,In stock (24 available),Fantasy
+The Golden Hour 8,£13.05,One,In stock (2 available),Fantasy
+Beneath the Surface 9,£33.84,One,In stock (17 available),Fantasy
+A Winter's Tale 10,£52.57,Five,In stock (3 available),Fantasy
+The Ivory Gate 11,£53.09,One,Out of stock,Fantasy
+Beneath the Surface 12,£22.31,Five,In stock (3 available),Fantasy
+The Crimson Letter 13,£42.87,Three,In stock (7 available),Fantasy
+The Ivory Gate 14,£45.81,Three,In stock (13 available),Fantasy
+Echoes of Dawn 15,£43.58,Four,In stock (11 available),Fantasy
+A Winter's Tale 16,£10.47,One,In stock (18 available),Fantasy
+Beyond the Horizon 1,£35.29,Three,In stock (29 available),Fiction
+A Winter's Tale 2,£53.96,Three,In stock (6 available),Fiction
+Winds of Change 3,£51.69,Five,In stock (26 available),Fiction
+Ashes and Embers 4,£36.45,One,In stock (29 available),Fiction
+Echoes of Dawn 5,£23.22,Five,In stock (5 available),Fiction
+The Forgotten Kingdom 6,£24.09,Three,In stock (7 available),Fiction
+The Ivory Gate 7,£41.71,Five,In stock (16 available),Fiction
+The Forgotten Kingdom 8,£55.27,One,In stock (21 available),Fiction
+The Crimson Letter 9,£51.47,One,In stock (11 available),Fiction
+Echoes of Dawn 10,£41.86,Two,In stock (24 available),Fiction
+Winds of Change 11,£37.58,Five,Out of stock,Fiction
+The Silent Path 12,£15.59,Five,In stock (2 available),Fiction
+Songs of the Sea 13,£39.13,Four,In stock (5 available),Fiction
+Shadows of Time 14,£25.41,Three,In stock (7 available),Fiction
+The Ivory Gate 15,£22.48,Three,In stock (25 available),Fiction
+The Golden Hour 16,£54.21,Five,Out of stock,Fiction

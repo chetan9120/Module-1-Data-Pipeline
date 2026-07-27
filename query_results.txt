@@ -3,38 +3,37 @@
 Q1: SELECT/WHERE — in-stock books priced under 2000 INR
 ======================================================================
 title | price_inr | rating
-The Hidden Garden 1 | 1071.88 | 4
-Beneath the Surface 15 | 1092.98 | 2
-The Quiet Storm 14 | 1096.14 | 5
-Ashes and Embers 1 | 1186.88 | 1
-Fragments of Memory 5 | 1195.32 | 5
-Beneath the Surface 5 | 1264.94 | 5
-The Ivory Gate 6 | 1374.66 | 1
-Beneath the Surface 16 | 1376.78 | 5
-A Winter's Tale 3 | 1413.7 | 5
-Shadows of Time 2 | 1478.06 | 5
-Fragments of Memory 11 | 1535.02 | 4
-Shadows of Time 4 | 1548.74 | 1
-Whispers in the Dark 2 | 1791.39 | 2
-Echoes of Dawn 8 | 1791.39 | 3
-Songs of the Sea 13 | 1887.4 | 3
-Ashes and Embers 16 | 1912.72 | 3
-(16 rows)
+A Winter's Tale 16 | 1104.58 | 1
+The Paper Moon 15 | 1157.34 | 3
+The Quiet Storm 4 | 1195.32 | 5
+Shadows of Time 3 | 1212.2 | 2
+The Golden Hour 8 | 1376.78 | 1
+The Forgotten Kingdom 2 | 1404.21 | 2
+Voices in the Fog 11 | 1422.14 | 3
+The Paper Moon 6 | 1535.02 | 1
+A Distant Light 8 | 1565.62 | 5
+The Golden Hour 2 | 1571.95 | 1
+Ashes and Embers 1 | 1642.64 | 2
+The Silent Path 12 | 1644.74 | 5
+The Forgotten Kingdom 4 | 1791.39 | 5
+The Crimson Letter 11 | 1889.5 | 3
+Ashes and Embers 15 | 1958.08 | 2
+(15 rows)
 
 ======================================================================
 Q2: ORDER BY/LIMIT — 10 most expensive books (INR)
 ======================================================================
 title | price_inr
-Songs of the Sea 10 | 6316.28
-A Distant Light 13 | 6252.98
-Fragments of Memory 14 | 6177.02
-The Ivory Gate 9 | 6049.37
-A Distant Light 4 | 6021.94
-The Ivory Gate 15 | 6008.22
-Winds of Change 9 | 5955.48
-Whispers in the Dark 16 | 5830.98
-Beyond the Horizon 12 | 5815.16
-The Forgotten Kingdom 16 | 5748.7
+The Silent Path 5 | 6252.98
+The Forgotten Kingdom 9 | 6177.02
+Beyond the Horizon 7 | 6104.23
+The Paper Moon 2 | 6049.37
+The Amber Room 11 | 5990.29
+The Forgotten Kingdom 8 | 5830.98
+The Golden Hour 16 | 5719.16
+A Winter's Tale 2 | 5692.78
+Whispers in the Dark 12 | 5625.26
+Beyond the Horizon 4 | 5615.76
 (10 rows)
 
 ======================================================================
@@ -52,91 +51,107 @@ rating
 Q4: BETWEEN — books priced between 1500 and 3000 INR
 ======================================================================
 title | price_inr
-Beneath the Surface 7 | 1506.54
-The Ivory Gate 3 | 1513.92
-Fragments of Memory 11 | 1535.02
-Shadows of Time 4 | 1548.74
-Beyond the Horizon 9 | 1594.1
-Ashes and Embers 16 | 1643.69
-Beyond the Horizon 2 | 1753.41
-Whispers in the Dark 2 | 1791.39
-Echoes of Dawn 8 | 1791.39
-Songs of the Sea 13 | 1887.4
-Ashes and Embers 16 | 1912.72
-Echoes of Dawn 8 | 2022.44
-The Last Voyage 7 | 2065.69
-The Forgotten Kingdom 6 | 2168.02
-A Winter's Tale 11 | 2179.63
-A Winter's Tale 1 | 2310.45
-Songs of the Sea 6 | 2317.84
-A Winter's Tale 12 | 2601.63
-Echoes of Dawn 15 | 2620.62
-Whispers in the Dark 14 | 2837.95
-The Hidden Garden 8 | 2849.56
-(21 rows)
+The Paper Moon 6 | 1535.02
+A Distant Light 8 | 1565.62
+The Golden Hour 2 | 1571.95
+Ashes and Embers 1 | 1642.64
+The Silent Path 12 | 1644.74
+The Forgotten Kingdom 4 | 1791.39
+The Crimson Letter 11 | 1889.5
+Ashes and Embers 7 | 1899.0
+Whispers in the Dark 3 | 1932.76
+Ashes and Embers 15 | 1958.08
+Songs of the Sea 14 | 2160.64
+Whispers in the Dark 6 | 2239.76
+Shadows of Time 1 | 2262.98
+The Golden Hour 7 | 2269.31
+Shadows of Time 16 | 2325.22
+Beneath the Surface 12 | 2353.7
+The Ivory Gate 15 | 2371.64
+Echoes of Dawn 5 | 2449.71
+A Distant Light 16 | 2479.25
+The Forgotten Kingdom 6 | 2541.5
+The Golden Hour 10 | 2601.63
+Beyond the Horizon 7 | 2620.62
+Shadows of Time 14 | 2680.76
+(23 rows)
 
 ======================================================================
 Q5: IN — books in a chosen subset of categories
 ======================================================================
 title | category_id
-A Winter's Tale 1 | 2
-Beyond the Horizon 2 | 2
+The Forgotten Kingdom 1 | 2
+The Golden Hour 2 | 2
 Whispers in the Dark 3 | 2
-The Last Voyage 4 | 2
-The Crimson Letter 5 | 2
-The Ivory Gate 6 | 2
-The Last Voyage 7 | 2
-Echoes of Dawn 8 | 2
-Whispers in the Dark 9 | 2
-Shadows of Time 10 | 2
-Whispers in the Dark 11 | 2
-Beyond the Horizon 12 | 2
-A Distant Light 13 | 2
-Winds of Change 14 | 2
+Beyond the Horizon 4 | 2
+The Silent Path 5 | 2
+The Crimson Letter 6 | 2
+Beyond the Horizon 7 | 2
+The Golden Hour 8 | 2
+Beneath the Surface 9 | 2
+A Winter's Tale 10 | 2
+The Ivory Gate 11 | 2
+Beneath the Surface 12 | 2
+The Crimson Letter 13 | 2
+The Ivory Gate 14 | 2
 Echoes of Dawn 15 | 2
-Beneath the Surface 16 | 2
+A Winter's Tale 16 | 2
 Ashes and Embers 1 | 5
-Whispers in the Dark 2 | 5
-The Ivory Gate 3 | 5
-Shadows of Time 4 | 5
-Fragments of Memory 5 | 5
-Voices in the Fog 6 | 5
-Beneath the Surface 7 | 5
-The Hidden Garden 8 | 5
-Beyond the Horizon 9 | 5
-The Last Voyage 10 | 5
-Shadows of Time 11 | 5
-A Winter's Tale 12 | 5
-Beneath the Surface 13 | 5
-The Ivory Gate 14 | 5
-Whispers in the Dark 15 | 5
-Ashes and Embers 16 | 5
+Echoes of Dawn 2 | 5
+Shadows of Time 3 | 5
+The Quiet Storm 4 | 5
+Whispers in the Dark 5 | 5
+The Hidden Garden 6 | 5
+Beyond the Horizon 7 | 5
+A Distant Light 8 | 5
+Shadows of Time 9 | 5
+The Golden Hour 10 | 5
+Voices in the Fog 11 | 5
+Whispers in the Dark 12 | 5
+Winds of Change 13 | 5
+Songs of the Sea 14 | 5
+Ashes and Embers 15 | 5
+A Distant Light 16 | 5
 (32 rows)
 
 ======================================================================
 Q6: JOIN — top 3 highest-rated books per category (books x categories)
 ======================================================================
 category_name | title | rating | price_inr
-Classics | A Winter's Tale 8 | 5 | 5094.6
-Classics | The Forgotten Kingdom 10 | 5 | 5656.91
-Classics | Beyond the Horizon 11 | 5 | 5038.68
-Classics | Winds of Change 13 | 5 | 3436.14
-Fantasy | A Winter's Tale 1 | 5 | 2310.45
-Fantasy | Beyond the Horizon 2 | 5 | 1753.41
-Fantasy | Shadows of Time 10 | 5 | 5464.9
-Fantasy | Beneath the Surface 16 | 5 | 1376.78
-Fiction | Shadows of Time 2 | 5 | 1478.06
-Fiction | A Winter's Tale 3 | 5 | 1413.7
-Fiction | Beneath the Surface 5 | 5 | 1264.94
-Fiction | The Crimson Letter 6 | 5 | 4036.43
-Fiction | A Winter's Tale 11 | 5 | 2179.63
-Fiction | The Quiet Storm 14 | 5 | 1096.14
-Mystery | The Amber Room 9 | 5 | 3314.81
-Mystery | The Hidden Garden 3 | 4 | 3056.34
-Mystery | Beyond the Horizon 7 | 4 | 3141.79
-Mystery | Fragments of Memory 11 | 4 | 1535.02
-Travel | The Ivory Gate 3 | 5 | 1513.92
-Travel | Fragments of Memory 5 | 5 | 1195.32
-Travel | Voices in the Fog 6 | 5 | 3268.39
-Travel | A Winter's Tale 12 | 5 | 2601.63
-(22 rows)
+Classics | The Quiet Storm 3 | 5 | 3287.38
+Classics | Shadows of Time 9 | 5 | 5589.39
+Classics | The Forgotten Kingdom 10 | 5 | 4583.98
+Fantasy | Beyond the Horizon 7 | 5 | 2620.62
+Fantasy | A Winter's Tale 10 | 5 | 5546.14
+Fantasy | Beneath the Surface 12 | 5 | 2353.7
+Fiction | Winds of Change 3 | 5 | 5453.3
+Fiction | Echoes of Dawn 5 | 5 | 2449.71
+Fiction | The Ivory Gate 7 | 5 | 4400.4
+Fiction | Winds of Change 11 | 5 | 3964.69
+Fiction | The Silent Path 12 | 5 | 1644.74
+Fiction | The Golden Hour 16 | 5 | 5719.16
+Mystery | The Forgotten Kingdom 4 | 5 | 1791.39
+Mystery | Ashes and Embers 7 | 5 | 1899.0
+Mystery | A Winter's Tale 8 | 5 | 3084.82
+Mystery | The Hidden Garden 14 | 5 | 3900.34
+Travel | Echoes of Dawn 2 | 5 | 4939.51
+Travel | The Quiet Storm 4 | 5 | 1195.32
+Travel | A Distant Light 8 | 5 | 1565.62
+Travel | The Golden Hour 10 | 5 | 2601.63
+(20 rows)
+
+======================================================================
+Q7: stock_count — low-stock in-stock books (fewer than 5 available)
+======================================================================
+title | stock_count | price_inr
+Winds of Change 14 | 2 | 5611.54
+The Golden Hour 8 | 2 | 1376.78
+The Silent Path 12 | 2 | 1644.74
+Beyond the Horizon 7 | 3 | 6104.23
+Shadows of Time 9 | 3 | 4904.7
+Voices in the Fog 11 | 3 | 1422.14
+The Golden Hour 7 | 3 | 2269.31
+A Winter's Tale 10 | 3 | 5546.14
+Beneath the Surface 12 | 3 | 2353.7
+The Paper Moon 12 | 4 | 5314.04
+(10 rows)
