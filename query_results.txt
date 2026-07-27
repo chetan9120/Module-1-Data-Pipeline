@@ -1,0 +1,142 @@
+
+======================================================================
+Q1: SELECT/WHERE — in-stock books priced under 2000 INR
+======================================================================
+title | price_inr | rating
+The Hidden Garden 1 | 1071.88 | 4
+Beneath the Surface 15 | 1092.98 | 2
+The Quiet Storm 14 | 1096.14 | 5
+Ashes and Embers 1 | 1186.88 | 1
+Fragments of Memory 5 | 1195.32 | 5
+Beneath the Surface 5 | 1264.94 | 5
+The Ivory Gate 6 | 1374.66 | 1
+Beneath the Surface 16 | 1376.78 | 5
+A Winter's Tale 3 | 1413.7 | 5
+Shadows of Time 2 | 1478.06 | 5
+Fragments of Memory 11 | 1535.02 | 4
+Shadows of Time 4 | 1548.74 | 1
+Whispers in the Dark 2 | 1791.39 | 2
+Echoes of Dawn 8 | 1791.39 | 3
+Songs of the Sea 13 | 1887.4 | 3
+Ashes and Embers 16 | 1912.72 | 3
+(16 rows)
+
+======================================================================
+Q2: ORDER BY/LIMIT — 10 most expensive books (INR)
+======================================================================
+title | price_inr
+Songs of the Sea 10 | 6316.28
+A Distant Light 13 | 6252.98
+Fragments of Memory 14 | 6177.02
+The Ivory Gate 9 | 6049.37
+A Distant Light 4 | 6021.94
+The Ivory Gate 15 | 6008.22
+Winds of Change 9 | 5955.48
+Whispers in the Dark 16 | 5830.98
+Beyond the Horizon 12 | 5815.16
+The Forgotten Kingdom 16 | 5748.7
+(10 rows)
+
+======================================================================
+Q3: DISTINCT — distinct rating values present in the dataset
+======================================================================
+rating
+1
+2
+3
+4
+5
+(5 rows)
+
+======================================================================
+Q4: BETWEEN — books priced between 1500 and 3000 INR
+======================================================================
+title | price_inr
+Beneath the Surface 7 | 1506.54
+The Ivory Gate 3 | 1513.92
+Fragments of Memory 11 | 1535.02
+Shadows of Time 4 | 1548.74
+Beyond the Horizon 9 | 1594.1
+Ashes and Embers 16 | 1643.69
+Beyond the Horizon 2 | 1753.41
+Whispers in the Dark 2 | 1791.39
+Echoes of Dawn 8 | 1791.39
+Songs of the Sea 13 | 1887.4
+Ashes and Embers 16 | 1912.72
+Echoes of Dawn 8 | 2022.44
+The Last Voyage 7 | 2065.69
+The Forgotten Kingdom 6 | 2168.02
+A Winter's Tale 11 | 2179.63
+A Winter's Tale 1 | 2310.45
+Songs of the Sea 6 | 2317.84
+A Winter's Tale 12 | 2601.63
+Echoes of Dawn 15 | 2620.62
+Whispers in the Dark 14 | 2837.95
+The Hidden Garden 8 | 2849.56
+(21 rows)
+
+======================================================================
+Q5: IN — books in a chosen subset of categories
+======================================================================
+title | category_id
+A Winter's Tale 1 | 2
+Beyond the Horizon 2 | 2
+Whispers in the Dark 3 | 2
+The Last Voyage 4 | 2
+The Crimson Letter 5 | 2
+The Ivory Gate 6 | 2
+The Last Voyage 7 | 2
+Echoes of Dawn 8 | 2
+Whispers in the Dark 9 | 2
+Shadows of Time 10 | 2
+Whispers in the Dark 11 | 2
+Beyond the Horizon 12 | 2
+A Distant Light 13 | 2
+Winds of Change 14 | 2
+Echoes of Dawn 15 | 2
+Beneath the Surface 16 | 2
+Ashes and Embers 1 | 5
+Whispers in the Dark 2 | 5
+The Ivory Gate 3 | 5
+Shadows of Time 4 | 5
+Fragments of Memory 5 | 5
+Voices in the Fog 6 | 5
+Beneath the Surface 7 | 5
+The Hidden Garden 8 | 5
+Beyond the Horizon 9 | 5
+The Last Voyage 10 | 5
+Shadows of Time 11 | 5
+A Winter's Tale 12 | 5
+Beneath the Surface 13 | 5
+The Ivory Gate 14 | 5
+Whispers in the Dark 15 | 5
+Ashes and Embers 16 | 5
+(32 rows)
+
+======================================================================
+Q6: JOIN — top 3 highest-rated books per category (books x categories)
+======================================================================
+category_name | title | rating | price_inr
+Classics | A Winter's Tale 8 | 5 | 5094.6
+Classics | The Forgotten Kingdom 10 | 5 | 5656.91
+Classics | Beyond the Horizon 11 | 5 | 5038.68
+Classics | Winds of Change 13 | 5 | 3436.14
+Fantasy | A Winter's Tale 1 | 5 | 2310.45
+Fantasy | Beyond the Horizon 2 | 5 | 1753.41
+Fantasy | Shadows of Time 10 | 5 | 5464.9
+Fantasy | Beneath the Surface 16 | 5 | 1376.78
+Fiction | Shadows of Time 2 | 5 | 1478.06
+Fiction | A Winter's Tale 3 | 5 | 1413.7
+Fiction | Beneath the Surface 5 | 5 | 1264.94
+Fiction | The Crimson Letter 6 | 5 | 4036.43
+Fiction | A Winter's Tale 11 | 5 | 2179.63
+Fiction | The Quiet Storm 14 | 5 | 1096.14
+Mystery | The Amber Room 9 | 5 | 3314.81
+Mystery | The Hidden Garden 3 | 4 | 3056.34
+Mystery | Beyond the Horizon 7 | 4 | 3141.79
+Mystery | Fragments of Memory 11 | 4 | 1535.02
+Travel | The Ivory Gate 3 | 5 | 1513.92
+Travel | Fragments of Memory 5 | 5 | 1195.32
+Travel | Voices in the Fog 6 | 5 | 3268.39
+Travel | A Winter's Tale 12 | 5 | 2601.63
+(22 rows)

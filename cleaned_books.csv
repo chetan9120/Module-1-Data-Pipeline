@@ -1,0 +1,81 @@
+title,price_gbp,price_inr,rating,in_stock,category
+Ashes and Embers 1,11.25,1186.88,1,True,Travel
+Whispers in the Dark 2,16.98,1791.39,2,True,Travel
+The Ivory Gate 3,14.35,1513.92,5,False,Travel
+Shadows of Time 4,14.68,1548.74,1,True,Travel
+Fragments of Memory 5,11.33,1195.32,5,True,Travel
+Voices in the Fog 6,30.98,3268.39,5,False,Travel
+Beneath the Surface 7,50.47,5324.58,3,True,Travel
+The Hidden Garden 8,27.01,2849.56,4,True,Travel
+Beyond the Horizon 9,15.11,1594.1,3,False,Travel
+The Last Voyage 10,52.37,5525.04,3,True,Travel
+Shadows of Time 11,36.81,3883.46,4,False,Travel
+A Winter's Tale 12,24.66,2601.63,5,True,Travel
+Beneath the Surface 13,45.23,4771.76,2,True,Travel
+The Ivory Gate 14,48.65,5132.58,2,True,Travel
+Whispers in the Dark 15,29.01,3060.56,1,False,Travel
+Ashes and Embers 16,18.13,1912.72,3,True,Travel
+Beyond the Horizon 1,45.09,4757.0,3,True,Mystery
+The Quiet Storm 2,36.71,3872.9,2,True,Mystery
+The Hidden Garden 3,28.97,3056.34,4,True,Mystery
+The Ivory Gate 4,52.14,5500.77,3,True,Mystery
+Whispers in the Dark 5,50.25,5301.38,1,False,Mystery
+The Forgotten Kingdom 6,20.55,2168.02,1,True,Mystery
+Beyond the Horizon 7,29.78,3141.79,4,False,Mystery
+Echoes of Dawn 8,16.98,1791.39,3,True,Mystery
+The Amber Room 9,31.42,3314.81,5,False,Mystery
+Songs of the Sea 10,59.87,6316.28,2,True,Mystery
+Fragments of Memory 11,14.55,1535.02,4,True,Mystery
+The Last Voyage 12,41.37,4364.54,2,False,Mystery
+The Quiet Storm 13,29.24,3084.82,1,False,Mystery
+Fragments of Memory 14,58.55,6177.02,3,True,Mystery
+The Ivory Gate 15,44.09,4651.5,1,True,Mystery
+Ashes and Embers 16,15.58,1643.69,3,False,Mystery
+The Hidden Garden 1,10.16,1071.88,4,True,Classics
+Fragments of Memory 2,35.38,3732.59,2,True,Classics
+Ashes and Embers 3,52.08,5494.44,3,True,Classics
+Echoes of Dawn 4,48.13,5077.72,3,True,Classics
+The Quiet Storm 5,34.43,3632.36,3,True,Classics
+Songs of the Sea 6,21.97,2317.84,3,True,Classics
+Beneath the Surface 7,14.28,1506.54,1,False,Classics
+A Winter's Tale 8,48.29,5094.6,5,True,Classics
+The Ivory Gate 9,57.34,6049.37,4,True,Classics
+The Forgotten Kingdom 10,53.62,5656.91,5,False,Classics
+Beyond the Horizon 11,47.76,5038.68,5,True,Classics
+Voices in the Fog 12,29.95,3159.72,3,True,Classics
+Winds of Change 13,32.57,3436.14,5,True,Classics
+Whispers in the Dark 14,26.9,2837.95,1,True,Classics
+Beneath the Surface 15,10.36,1092.98,2,True,Classics
+Whispers in the Dark 16,55.27,5830.98,1,True,Classics
+A Winter's Tale 1,21.9,2310.45,5,False,Fantasy
+Beyond the Horizon 2,16.62,1753.41,5,False,Fantasy
+Whispers in the Dark 3,50.37,5314.04,4,True,Fantasy
+The Last Voyage 4,42.95,4531.23,1,True,Fantasy
+The Crimson Letter 5,33.35,3518.42,4,True,Fantasy
+The Ivory Gate 6,13.03,1374.66,1,True,Fantasy
+The Last Voyage 7,19.58,2065.69,2,False,Fantasy
+Echoes of Dawn 8,19.17,2022.44,4,False,Fantasy
+Whispers in the Dark 9,32.16,3392.88,1,True,Fantasy
+Shadows of Time 10,51.8,5464.9,5,True,Fantasy
+Whispers in the Dark 11,30.32,3198.76,2,False,Fantasy
+Beyond the Horizon 12,55.12,5815.16,4,True,Fantasy
+A Distant Light 13,59.27,6252.98,1,True,Fantasy
+Winds of Change 14,31.15,3286.32,3,False,Fantasy
+Echoes of Dawn 15,24.84,2620.62,2,True,Fantasy
+Beneath the Surface 16,13.05,1376.78,5,True,Fantasy
+Shadows of Time 1,39.21,4136.66,1,True,Fiction
+Shadows of Time 2,14.01,1478.06,5,True,Fiction
+A Winter's Tale 3,13.4,1413.7,5,True,Fiction
+A Distant Light 4,57.08,6021.94,1,True,Fiction
+Beneath the Surface 5,11.99,1264.94,5,True,Fiction
+The Crimson Letter 6,38.26,4036.43,5,True,Fiction
+The Forgotten Kingdom 7,43.49,4588.2,2,True,Fiction
+Whispers in the Dark 8,29.79,3142.84,3,True,Fiction
+Winds of Change 9,56.45,5955.48,3,True,Fiction
+The Silent Path 10,41.06,4331.83,4,True,Fiction
+A Winter's Tale 11,20.66,2179.63,5,True,Fiction
+Echoes of Dawn 12,54.04,5701.22,3,True,Fiction
+Songs of the Sea 13,17.89,1887.4,3,True,Fiction
+The Quiet Storm 14,10.39,1096.14,5,True,Fiction
+The Ivory Gate 15,56.95,6008.22,1,True,Fiction
+The Forgotten Kingdom 16,54.49,5748.7,1,True,Fiction
