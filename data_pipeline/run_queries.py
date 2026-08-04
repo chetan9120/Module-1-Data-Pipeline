@@ -11,6 +11,9 @@ Coverage:
   Q4 WHERE ... BETWEEN
   Q5 WHERE ... IN
   Q6 JOIN (books x categories) — top 10 highest-rated books per category (illustrated for one category + overall top rated join)
+
+Each query is logged with its header and full result set to query_results.txt
+so the SQL output is reviewable without re-running the script.
 """
 import sqlite3
 
