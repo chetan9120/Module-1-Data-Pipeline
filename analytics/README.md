@@ -30,7 +30,7 @@ independently of the EDA notebook.
 
 ## Files
 
-- `cleaning.py` — shared `load_raw()` / `missing_value_report()` / `clean()` / `load_and_clean()` functions, plus the missing-value threshold rule (see below).
+- `cleaning.py` — shared `load_raw()` / `missing_value_report()` / `clean()` / `load_and_clean()` functions, plus the missing-value threshold rule and the explicit, justified per-column decisions for columns above it (see below).
 - `titanic.csv` — the one committed offline fallback for the raw dataset (`df.to_csv("titanic.csv", index=False)`), loadable via `pd.read_csv("titanic.csv")`.
 - `01_eda.ipynb`, `02_modeling.ipynb` — executed notebooks with real outputs.
 - `charts/` — saved PNGs of every chart produced (distributions, correlation heatmaps, bivariate/multivariate plots, decision tree, ROC curves, residual plot).
@@ -45,18 +45,22 @@ Applied uniformly via `cleaning.py`, and to every affected column:
 
 | Missing % | Strategy |
 |---|---|
-| `> 40%` | Drop the column |
-| `> 0% and <= 5%` | Drop the affected rows |
-| `> 5% and <= 40%` | Impute (median for numeric, mode for categorical) |
+| `< 5%` | Drop the affected rows |
+| `5% – 30%` | Impute (median for numeric, mode for categorical) |
+| `> 30%` | No automatic rule — an explicit, justified per-column decision (drop the column, or encode `"Missing"` as its own category) |
 
-- `deck` — **77.2%** missing → dropped the column (over the 40% threshold).
-- `age` — **19.9%** missing → imputed with the median (inside the 5–40% band).
-- `embarked` / `embark_town` — **0.2%** missing → dropped the affected rows (at/under the 5% threshold).
+- `age` — **19.9%** missing → inside the 5–30% band → imputed with the median.
+- `embarked` / `embark_town` — **0.2%** missing → under the 5% threshold → dropped the affected rows.
+- `deck` — **77.2%** missing → over the 30% band, so no automatic rule applies. Explicit justified decision (recorded in `cleaning.py`'s `HIGH_MISSING_DECISIONS`): **dropped the column**, since at 77% missing there's too little real signal to impute meaningfully, and encoding `"Missing"` as its own category would mostly just recreate a near-constant flag rather than an informative feature.
 
 ### Outliers and skew
 
 - `age`: 66 IQR outliers, roughly symmetric distribution.
 - `fare`: 116 IQR outliers, strongly right-skewed — confirmed by **mean (32.20) > median (14.45) > mode (8.05)**.
+
+### Bivariate survival rates (boolean masking)
+
+Computed with explicit boolean masks combined via `&`/`|` (not `groupby`), per the assignment: survival rate by sex (male 0.189, female 0.740), by pclass (1st 0.626, 2nd 0.473, 3rd 0.242), and by sex & pclass together (e.g. female/1st 0.967 down to male/3rd 0.135) — see `01_eda.ipynb` section 4.
 
 ### Correlation — two strongest pairs
 
