@@ -37,6 +37,13 @@ network-restricted environment, allow that domain first.
 
 ## Scope / design decisions
 
+**Schema design.** Two tables: `categories` (`category_id` PK, `category_name`
+UNIQUE) and `books` (`book_id` PK, plus `category_id` as a FK referencing
+`categories`). Category names are normalized out into their own table rather
+than stored as a repeated text column on `books`, so the JOIN in Q6 and the
+`pd.merge` reproduction in `pandas_verify.py` operate on integer keys instead
+of string matching.
+
 **Scraping scope.** The assignment allows either "≥3 categories" or "first 5
 pages of All products." I scraped **5 named categories** (Travel, Mystery,
 Classics, Fantasy, Fiction), following pagination to the end of each. This
