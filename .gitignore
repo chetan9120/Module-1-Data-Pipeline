@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿**/__pycache__/
 *.pyc
 support_assistant/chroma_db/
 .venv/
+=======
+__pycache__/
+*.pyc
+>>>>>>> 8416a252004179d50130076aa3b1b2efa58f659d

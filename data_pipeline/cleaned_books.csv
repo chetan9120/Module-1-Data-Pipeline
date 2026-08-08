@@ -1,0 +1,81 @@
+title,price_gbp,price_inr,rating,in_stock,stock_count,category
+Ashes and Embers 1,15.57,1642.64,2,True,8,Travel
+Echoes of Dawn 2,46.82,4939.51,5,True,14,Travel
+Shadows of Time 3,11.49,1212.2,2,True,17,Travel
+The Quiet Storm 4,11.33,1195.32,5,True,14,Travel
+Whispers in the Dark 5,32.46,3424.53,1,True,25,Travel
+The Hidden Garden 6,44.91,4738.0,3,True,5,Travel
+Beyond the Horizon 7,57.86,6104.23,1,True,3,Travel
+A Distant Light 8,14.84,1565.62,5,True,9,Travel
+Shadows of Time 9,46.49,4904.7,4,True,3,Travel
+The Golden Hour 10,24.66,2601.63,5,True,7,Travel
+Voices in the Fog 11,13.48,1422.14,3,True,3,Travel
+Whispers in the Dark 12,53.32,5625.26,3,False,0,Travel
+Winds of Change 13,41.78,4407.79,2,True,12,Travel
+Songs of the Sea 14,20.48,2160.64,1,True,20,Travel
+Ashes and Embers 15,18.56,1958.08,2,True,15,Travel
+A Distant Light 16,23.5,2479.25,3,True,27,Travel
+Shadows of Time 1,21.45,2262.98,3,True,13,Mystery
+The Forgotten Kingdom 2,13.31,1404.21,2,True,21,Mystery
+The Paper Moon 3,29.78,3141.79,2,False,0,Mystery
+The Forgotten Kingdom 4,16.98,1791.39,5,True,14,Mystery
+Beneath the Surface 5,29.97,3161.84,2,True,17,Mystery
+The Paper Moon 6,14.55,1535.02,1,True,5,Mystery
+Ashes and Embers 7,18.0,1899.0,5,False,0,Mystery
+A Winter's Tale 8,29.24,3084.82,5,False,0,Mystery
+The Forgotten Kingdom 9,58.55,6177.02,1,True,22,Mystery
+The Golden Hour 10,47.54,5015.47,1,True,10,Mystery
+The Crimson Letter 11,17.91,1889.5,3,True,17,Mystery
+The Hidden Garden 12,35.38,3732.59,3,True,27,Mystery
+Ashes and Embers 13,35.38,3732.59,2,True,12,Mystery
+The Hidden Garden 14,36.97,3900.34,5,True,11,Mystery
+The Paper Moon 15,10.97,1157.34,3,True,8,Mystery
+Shadows of Time 16,22.04,2325.22,1,True,24,Mystery
+The Paper Moon 1,50.8,5359.4,2,True,22,Classics
+The Paper Moon 2,57.34,6049.37,3,True,17,Classics
+The Quiet Storm 3,31.16,3287.38,5,True,25,Classics
+The Amber Room 4,44.49,4693.7,4,True,22,Classics
+Ashes and Embers 5,28.67,3024.69,1,False,0,Classics
+Whispers in the Dark 6,21.23,2239.76,1,True,19,Classics
+The Golden Hour 7,21.51,2269.31,1,True,3,Classics
+Voices in the Fog 8,41.56,4384.58,1,True,29,Classics
+Shadows of Time 9,52.98,5589.39,5,True,8,Classics
+The Forgotten Kingdom 10,43.45,4583.98,5,True,5,Classics
+The Amber Room 11,56.78,5990.29,2,False,0,Classics
+The Paper Moon 12,50.37,5314.04,1,True,4,Classics
+The Ivory Gate 13,31.55,3328.52,4,False,0,Classics
+Winds of Change 14,53.19,5611.54,1,True,2,Classics
+A Distant Light 15,46.41,4896.25,2,True,7,Classics
+Beyond the Horizon 16,36.81,3883.46,4,True,6,Classics
+The Forgotten Kingdom 1,33.13,3495.22,4,True,26,Fantasy
+The Golden Hour 2,14.9,1571.95,1,True,30,Fantasy
+Whispers in the Dark 3,18.32,1932.76,4,False,0,Fantasy
+Beyond the Horizon 4,53.23,5615.76,2,True,13,Fantasy
+The Silent Path 5,59.27,6252.98,4,True,10,Fantasy
+The Crimson Letter 6,44.83,4729.56,2,False,0,Fantasy
+Beyond the Horizon 7,24.84,2620.62,5,True,24,Fantasy
+The Golden Hour 8,13.05,1376.78,1,True,2,Fantasy
+Beneath the Surface 9,33.84,3570.12,1,True,17,Fantasy
+A Winter's Tale 10,52.57,5546.14,5,True,3,Fantasy
+The Ivory Gate 11,53.09,5601.0,1,False,0,Fantasy
+Beneath the Surface 12,22.31,2353.7,5,True,3,Fantasy
+The Crimson Letter 13,42.87,4522.78,3,True,7,Fantasy
+The Ivory Gate 14,45.81,4832.96,3,True,13,Fantasy
+Echoes of Dawn 15,43.58,4597.69,4,True,11,Fantasy
+A Winter's Tale 16,10.47,1104.58,1,True,18,Fantasy
+Beyond the Horizon 1,35.29,3723.1,3,True,29,Fiction
+A Winter's Tale 2,53.96,5692.78,3,True,6,Fiction
+Winds of Change 3,51.69,5453.3,5,True,26,Fiction
+Ashes and Embers 4,36.45,3845.48,1,True,29,Fiction
+Echoes of Dawn 5,23.22,2449.71,5,True,5,Fiction
+The Forgotten Kingdom 6,24.09,2541.5,3,True,7,Fiction
+The Ivory Gate 7,41.71,4400.4,5,True,16,Fiction
+The Forgotten Kingdom 8,55.27,5830.98,1,True,21,Fiction
+The Crimson Letter 9,51.47,5430.08,1,True,11,Fiction
+Echoes of Dawn 10,41.86,4416.23,2,True,24,Fiction
+Winds of Change 11,37.58,3964.69,5,False,0,Fiction
+The Silent Path 12,15.59,1644.74,5,True,2,Fiction
+Songs of the Sea 13,39.13,4128.22,4,True,5,Fiction
+Shadows of Time 14,25.41,2680.76,3,True,7,Fiction
+The Ivory Gate 15,22.48,2371.64,3,True,25,Fiction
+The Golden Hour 16,54.21,5719.16,5,False,0,Fiction
