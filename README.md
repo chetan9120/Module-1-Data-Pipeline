@@ -9,7 +9,9 @@ module-level `README.md` covering install/run steps and design decisions.
 | Module | Path | Description |
 |---|---|---|
 | 1 — Data Pipeline | [`/data_pipeline`](./data_pipeline/README.md) | Scrapes books.toscrape.com, cleans and converts currency, loads into a normalized SQLite database, and runs SQL + pandas queries. |
-| 2 — Analytics Pipeline | [`/analytics`](./analytics/README.md) | EDA and predictive modeling on the Titanic dataset — cleaning, outlier/correlation analysis, three classifiers with full metrics, imbalance handling, a tuned Random Forest, a regression sub-task, and a saved end-to-end pipeline. |
+| 2 — Analytics Pipeline | [`/analytics`](./analytics/README.md) | EDA and predictive modeling on the Titanic dataset — cleaning, outlier/correlation analysis, three classifiers with full metrics, imbalance 
+| 3 — Support Assistant | [`/support_assistant`](/support_assistant) | RAG-based Zepto customer-support assistant — LangGraph intent routing, ChromaDB + sentence-transformers retrieval, Pydantic-validated structured output, FastAPI + Docker. Fully offline mock-gradable, with an optional real-LLM (Groq free tier) extension. |
+handling, a tuned Random Forest, a regression sub-task, and a saved end-to-end pipeline. |
 
 Git workflow note: this repo's commits show a feature branch created,
 committed to multiple times, and merged back into `main` — that check
